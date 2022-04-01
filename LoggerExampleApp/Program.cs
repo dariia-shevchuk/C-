@@ -10,4 +10,6 @@ var myMath = new MyMath(logger);
 
 var result = myMath.Add(5, 5);
 
+var rr = myMath.Divide(2, 0);
+
 

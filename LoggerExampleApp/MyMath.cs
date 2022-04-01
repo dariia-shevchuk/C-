@@ -15,6 +15,8 @@ namespace LoggerExampleApp
         }
         public int Add(int a, int b)
         {
+
+
             _logger.LogTrace($"Parametry: a={a}, b={b}");
             _logger.LogInformation("To jest jakas informacja");
             return a + b;
