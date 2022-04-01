@@ -68,9 +68,7 @@ namespace AP.SlLoggerr
         private void Log(string msg, LogLevel level)
         {
             if (_level <= level)
-            {
                 _loggerController.Log($"{DateTime.Now} - {level}: " + msg);
-            }
         }
 
 
