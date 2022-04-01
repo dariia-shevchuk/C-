@@ -1,17 +1,19 @@
 ﻿using AP.SlLoggerr.Enums;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
 namespace AP.SlLoggerr
 {
     public class Logger
     {
-        public Logger(LogLevel level)
+        public Logger(LogLevel level, LoggerController loggerController)
         {
             _level = level;
+            _loggerController = loggerController;
         }
 
         private LogLevel _level;
-
+        private LoggerController _loggerController;
 
         public void LogTrace(string message,
             [CallerFilePath] string filePath = "", [CallerMemberName] string caller = "", [CallerLineNumber]int lineNumber = 0)
@@ -66,7 +68,9 @@ namespace AP.SlLoggerr
         private void Log(string msg, LogLevel level)
         {
             if (_level <= level)
-                Console.WriteLine($"{DateTime.Now} - {level}: " + msg);
+            {
+                _loggerController.Log($"{DateTime.Now} - {level}: " + msg);
+            }
         }
 
 

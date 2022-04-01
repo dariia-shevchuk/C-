@@ -32,7 +32,8 @@ namespace LoggerExampleApp
             catch (Exception)
             {
                 _logger.LogError($"Parametry: a={a}, b={b}");
-                throw;
+                return -1;
+                
             }
         }
     }

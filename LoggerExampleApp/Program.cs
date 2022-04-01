@@ -3,8 +3,8 @@ using LoggerExampleApp;
 using System.Diagnostics;
 
 Debug.WriteLine("Hello, World!");
-
-var logger = new Logger(AP.SlLoggerr.Enums.LogLevel.Trace);
+var controller = new LoggerController(new LoggerBase[] {new ConsoleLogger(), new OutputLogger(), new NewSomStufLogger() });
+var logger = new Logger(AP.SlLoggerr.Enums.LogLevel.Trace,controller);
 var myMath = new MyMath(logger);
 
 
