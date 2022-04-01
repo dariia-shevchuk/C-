@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 Debug.WriteLine("Hello, World!");
 
-var logger = new Logger(AP.SlLoggerr.Enums.LogLevel.Information);
+var logger = new Logger(AP.SlLoggerr.Enums.LogLevel.Trace);
 var myMath = new MyMath(logger);
 
 

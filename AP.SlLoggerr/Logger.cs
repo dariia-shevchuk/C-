@@ -13,36 +13,44 @@ namespace AP.SlLoggerr
 
 
         public void LogTrace(string message)
-        {      
-            if(_level <= LogLevel.Trace)
-                Console.WriteLine("Trace: " + message);
+        {
+            Log(message, LogLevel.Trace);
         }
 
-        public void LogDebug(string messagew)
+        public void LogDebug(string message)
         {
-            if (_level <= LogLevel.Debug)
-                Console.WriteLine("Debug: " + messagew);
+            Log(message, LogLevel.Debug);
+
         }
 
-        public void LogInformation(string messagew)
+        public void LogInformation(string message)
         {
-            if (_level <= LogLevel.Information)
-                Console.WriteLine("Information: "+ messagew);
+            Log(message, LogLevel.Information);
+
         }
 
-        public void LogWarning(string messagew)
+        public void LogWarning(string message)
         {
-            Console.WriteLine(messagew);
+            Log(message, LogLevel.Warning);
+
         }
 
-        public void LogError(string messagew)
+        public void LogError(string message)
         {
-            Console.WriteLine(messagew);
+            Log(message, LogLevel.Error);
+
         }
 
-        public void LogCritical(string messagew)
+        public void LogCritical(string message)
         {
-            Console.WriteLine(messagew);
+            Log(message, LogLevel.Critical);
+
+        }
+
+        private void Log(string msg, LogLevel level)
+        {
+            if (_level <= level)
+                Console.WriteLine($"{level}: " + msg);
         }
 
     }
