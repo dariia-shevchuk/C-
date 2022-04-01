@@ -1,16 +1,10 @@
-﻿using System.Diagnostics;
+﻿using AP.SlLoggerr;
+using LoggerExampleApp;
+using System.Diagnostics;
 
 Debug.WriteLine("Hello, World!");
 
-public enum LogLevel
-{
-    Trace =	0,
-    Debug	= 1,
-    Information =	2,
-    Warning	= 3,
-    Error	= 4	,
-    Critical  = 5,
-    None	= 6,
-}
+var logger = new Logger(AP.SlLoggerr.Enums.LogLevel.Information);
+var myMath = new MyMath(logger);
 
 
