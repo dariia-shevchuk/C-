@@ -6,8 +6,22 @@ using System.Threading.Tasks;
 
 namespace Ap.SlMarsRover.Base
 {
-    public class Step
+    public abstract class Step
     {
+        public Step(string name)
+        {
+            Nmae = name;
+        }
+        public string Nmae { get; }
 
+        internal Status Status { get; }
+
+        public void DoWork()
+        {
+            Status = Status.Processing;
+            OnDoWork();
+        }
+
+        protected abstract void OnDoWork();
     }
 }

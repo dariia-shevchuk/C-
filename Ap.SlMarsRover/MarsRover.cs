@@ -25,5 +25,6 @@ namespace Ap.SlMarsRover
         Success,
         Fail,
         Waiting,
+        Processing
     }
 }
