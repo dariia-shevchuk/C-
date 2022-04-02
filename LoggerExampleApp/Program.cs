@@ -10,7 +10,7 @@ var controller = new LoggerController(new LoggerBase[] {new ConsoleLogger(),
     new FileLogger()
 }); 
 
-var logger = new Logger(AP.SlLoggerr.Enums.LogLevel.Trace,controller);
+var logger = new Logger(AP.SlLoggerr.Enums.LogLevel.Error,controller);
 var myMath = new MyMath(logger);
 
 var marsRover = new MarsRover(logger);
@@ -19,6 +19,8 @@ var marsRover = new MarsRover(logger);
 var result = myMath.Add(5, 5);
 
 var rr = myMath.Divide(2, 0);
+
+marsRover.RunTasks();
 
 
 

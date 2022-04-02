@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace Ap.SlMarsRover.Base
 {
-    public abstract class Step
-    {
-        public Step(string name)
-        {
-            Nmae = name;
-        }
-        public string Nmae { get; }
 
-        internal Status Status { get; }
+
+    public abstract class Step : StpeCore
+    {
+        protected Step(string name) 
+            : base(name)
+        {
+        }
 
         public void DoWork()
         {
