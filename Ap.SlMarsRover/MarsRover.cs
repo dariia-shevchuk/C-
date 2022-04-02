@@ -5,14 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LoggerExampleApp
+namespace Ap.SlMarsRover
 {
-    public class ConsoleLogger : LoggerBase
+    public class MarsRover
     {
-        public override void SendLog(string msg)
+        public MarsRover(Logger logger)
         {
-            Console.WriteLine(msg);
+            logger.LogInformation("Czesc tu konstruktor łazika marsjańskiego");
         }
-
     }
 }

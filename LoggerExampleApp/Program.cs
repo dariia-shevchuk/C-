@@ -1,4 +1,5 @@
-﻿using AP.SlLoggerr;
+﻿using Ap.SlMarsRover;
+using AP.SlLoggerr;
 using LoggerExampleApp;
 using System.Diagnostics;
 
@@ -8,8 +9,11 @@ var controller = new LoggerController(new LoggerBase[] {new ConsoleLogger(),
     new NewSomStufLogger(),
     new FileLogger()
 }); 
+
 var logger = new Logger(AP.SlLoggerr.Enums.LogLevel.Trace,controller);
 var myMath = new MyMath(logger);
+
+var marsRover = new MarsRover(logger);
 
 
 var result = myMath.Add(5, 5);

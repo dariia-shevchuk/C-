@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace AP.SlLoggerr
 {
-
-
     public class LoggerController
     {
         private LoggerBase[] _loggerBases;
@@ -21,7 +19,9 @@ namespace AP.SlLoggerr
         internal void Log(string msg)
         {
             foreach (var loggerBase in _loggerBases)
+            {
                 loggerBase.SendLog(msg);
+            }
 
         }
     }

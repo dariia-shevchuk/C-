@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerExampleApp", "LoggerExampleApp\LoggerExampleApp.csproj", "{06AE54B6-26E4-4876-AEF6-E9330F74178E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerExampleApp", "LoggerExampleApp\LoggerExampleApp.csproj", "{06AE54B6-26E4-4876-AEF6-E9330F74178E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AP.SlLoggerr", "AP.SlLoggerr\AP.SlLoggerr.csproj", "{EDE6A39B-872A-401E-B485-40FAFAD46164}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AP.SlLoggerr", "AP.SlLoggerr\AP.SlLoggerr.csproj", "{EDE6A39B-872A-401E-B485-40FAFAD46164}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ap.SlMarsRover", "Ap.SlMarsRover\Ap.SlMarsRover.csproj", "{7F5E18F3-FAD5-49B9-BF21-737F6AA60FED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{EDE6A39B-872A-401E-B485-40FAFAD46164}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDE6A39B-872A-401E-B485-40FAFAD46164}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDE6A39B-872A-401E-B485-40FAFAD46164}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F5E18F3-FAD5-49B9-BF21-737F6AA60FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F5E18F3-FAD5-49B9-BF21-737F6AA60FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F5E18F3-FAD5-49B9-BF21-737F6AA60FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F5E18F3-FAD5-49B9-BF21-737F6AA60FED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
