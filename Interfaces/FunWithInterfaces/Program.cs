@@ -25,6 +25,12 @@ var sender = new DataSender();
 sender.SendData(new byte[] { 0x01, 0x02, 0x01, 0x03, 0x07 }); // wysyłąme dane przez TCP
 (sender as INfc).SendData(new byte[] { 0x08, 0x09 });
 
+IShape[] shapes = new IShape[] { c1, r1, hex };
+foreach (var item in shapes)
+{
+    item.DrawMe();
+}
+var r = GetShape(100);
 Console.ReadLine();
 
 static void Print(IShape shape)
@@ -42,34 +48,13 @@ static void GetData(IPerson person)
     Console.WriteLine(person.GetData());
 }
 
-public interface ITcp
+static IShape GetShape(int i)
 {
-    void SendData(byte[] data);
-}
-
-public interface INfc
-{
-    void SendData(byte[] data);
-}
-
-public class DataSender : ITcp, INfc
-{
-    /// <summary>
-    /// Jawna implementacja metody z interfejsu INfc
-    /// </summary>
-    /// <param name="data"></param>
-    public void SendData(byte[] data)
+    switch (i)
     {
-        Console.WriteLine($"Wysyłąm {data.Length} bajtow przez TCP ");
-    }
-
-    /// <summary>
-    /// Niejawna implementacja metody z interfejsu ITcp
-    /// (aby jej użyć musimy rzutować obiekt na ITcp np.za pomocą słowa "as"
-    /// </summary>
-    /// <param name="data"></param>
-    void INfc.SendData(byte[] data)
-    {
-        Console.WriteLine($"Wysyłąm {data.Length} bajtow przez NFC ");
+        case 0: return new Circle();
+        case 1: return new Rectangle();
+        default:
+            return new Hexagon();
     }
 }
