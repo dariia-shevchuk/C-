@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-var dataCollection = new DataCollection(new DateTime(2022, 1, 1), new DateTime(2022, 5, 31));
+var dataCollection = new DataCollection(new DateTime(2019, 2, 1),
+    new DateTime(2022, 5, 31));
 foreach (var item in dataCollection)
 {
     Console.WriteLine(item);
