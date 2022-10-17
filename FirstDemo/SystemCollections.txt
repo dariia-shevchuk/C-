@@ -1,0 +1,14 @@
+﻿Najciekawsze interfejsy w przestrzeni nazw System.Collections
+
+ICollection: określa ogólne cechy wszystkich kolekcji (rozmiar, bezpieczeństwo wątków, wyliczenie
+IComparer: Pozwala porównywać dwa obiekty.
+IDictionary: Pozwala przechowywać zawartość za pomocą par nazwa/wartość
+IEnumerable: Zwraca interfejs IEnumerator do danego obiektu.
+IEnumerator: Umożliwia użycie pętli foreach
+IList: Pozwala dodwać, usuwać, indeksować elementy na liście
+
+niektóre klasy w przestrzeni nazw System.Collections
+ArrayList: Tablica obiektów o dynamicznym rozmiarze, Implementuje IList, ICollection, IEnumerable, ICloneable
+Queue: Kolekcja FIFO, Implementuje ICollection, ICloneable, IEnumerable
+Stack: Kolekcja LIFO, Implementuje ICollection, Icloneable, IEnumerable
+

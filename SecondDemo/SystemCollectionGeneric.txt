@@ -1,0 +1,22 @@
+﻿Interfejsy 
+ICollection<T>
+IComparer<T>
+IDictionary<TKey, TValue>
+IEnumerable<T>
+IEnumerator<T>
+IList<T>
+
+Zkodnie z konwencją wypełniacze typów generycznych są określane za pomocą nazw pospolitych
+Mimo, że dozwolone jest dowolna litera (lub słowo), do typów najczęściej używa się liter T
+do kluczy TKey a do wartości TValue
+
+klasy z przestrzeni System.Collection.Generic
+
+Collection<T>
+Comparer<T>
+Dictionary<TKey, TValue>
+List<T>
+Queue<T>
+Stack<T>
+
+zachencam do zabawy z tymi kolekcjami.
