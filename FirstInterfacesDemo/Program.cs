@@ -70,9 +70,6 @@ namespace FirstInterfacesDemo
             //wysyłam dane przez NFC
             dataSender.SendData(new byte[] { 1, 2, 3, 4, 5 });
             (dataSender as ITcp).SendData(new byte[] { 4, 5, 6, 7, 8, 9, 10 });
-
-
-
         }
 
         //******* złe rozwiązanie 
