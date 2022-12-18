@@ -1,0 +1,40 @@
+﻿<Window x:Class="WebAoiClient.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:view="clr-namespace:WebAoiClient.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Button Command="{Binding GetAllSongCommand}">
+            Refresh
+        </Button>
+        <ItemsControl ItemsSource="{Binding Songs}">
+           <ItemsControl.ItemTemplate>
+                <DataTemplate >
+                    <Border BorderBrush="Aqua" BorderThickness="1" CornerRadius="15">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <!--Totle -->
+                                <ColumnDefinition Width="15"/>
+                                <!--Title-->
+                                <ColumnDefinition Width="*"/>
+                                <!--Album-->
+                                <ColumnDefinition Width="*"/>
+                                <!--Year-->
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="200"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock FontSize="20" Text="{Binding Id, Mode=OneWay}"></TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="20" Text="{Binding Title, Mode=OneWay}"></TextBlock>
+                            <TextBlock Grid.Column="2" FontSize="20" Text="{Binding Album, Mode=OneWay}"></TextBlock>
+                            <TextBlock Grid.Column="3" FontSize="20" Text="{Binding ReleaseYear, Mode=OneWay}"></TextBlock>
+                            <Button Grid.Column="4" Margin="10" Command="{Binding DeleteSongCommand}">Delete</Button>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
+</Window>

@@ -22,24 +22,36 @@ namespace MyFirstWebApi.Controllers
             _songService = songService;
         }
 
+        /// <summary>
+        /// Pobieranie wszystkich piosenek
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult<IEnumerable<Song>> Get()
         {
             var result = _songService.GetAllSongs();
-            if(result.Any())
-              return Ok(result);
-            return NotFound();
+            return Ok(result);
         }
 
+        /// <summary>
+        /// Pobieranie piosenki po id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("GetSongById")]
         public ActionResult<Song> GetSongById([FromQuery] int id)
         {
-           var result = _songService.GetSongById(id);
+            var result = _songService.GetSongById(id);
             if (result is null)
                 return NotFound();
             return Ok(result);
         }
 
+        /// <summary>
+        /// dodawanie nowej piosenki
+        /// </summary>
+        /// <param name="newSong"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult Post([FromBody] Song newSong)
         {
