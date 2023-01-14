@@ -68,7 +68,7 @@ namespace DelegeateFirst
 
             //wywołaj metode add niebezpośrednio tylko używając delegata
             var result = firstDelegate(5, 15); // niejawne wywołanie metody Invoke
-            Console.WriteLine("5 + 10 = {0}",result);
+            Console.WriteLine("5 + 10 = {0}", result);
 
             //analiza delegata
             Console.WriteLine("\n *** Analiza Delegata ***\n");
@@ -81,9 +81,9 @@ namespace DelegeateFirst
             //metoda instancyjna
             var math = new SampleMathVersionTwo();
             var FirstDelegateVersionTwo = new FirstDelegate(math.Subtract);
-           
+
             Console.WriteLine("5 - 10 = {0}", FirstDelegateVersionTwo.Invoke(5, 10)); // dla przykładu jawne wywołanie metody Invoke
-                    
+
             Console.WriteLine("\n*** Druga analiza Delegata ***\n");
             foreach (var d in FirstDelegateVersionTwo.GetInvocationList())
             {

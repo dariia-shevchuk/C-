@@ -1,0 +1,17 @@
+﻿CREATE TABLE [User]
+(
+	Id INT IDENTITY PRIMARY KEY,
+	Email NVARCHAR(50) NOT NULL,
+	[Password] NVARCHAR(50) NOT NULL,
+	FirstName NVARCHAR(50) NOT NULL,
+	LastName NVARCHAR(50) NOT NULL
+)
+
+Create Table RefreshToken
+(
+	Id UNIQUEIDENTIFIER PRIMARY KEY default NEWID(),
+	UserId int not null,
+	Token nvarchar(50) not null,
+	CreatedAt datetime not null,
+	RevokedAt datetime,
+)

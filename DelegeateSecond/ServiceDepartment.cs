@@ -12,9 +12,9 @@ namespace DelegeateSecond
                 return;
             }
             Console.WriteLine("Ten samochód jest czysty");
-            
 
-        
+
+
         }
 
         public void RotateTires(Car car)

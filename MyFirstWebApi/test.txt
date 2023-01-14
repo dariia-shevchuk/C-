@@ -1,0 +1,7 @@
+﻿pm.test("Status test", function() {
+    pm.response.to.have.status(200);
+});
+
+var data = pm.response.json();
+console.log(data)
+pm.environment.set("accessToken", data.accessToken);

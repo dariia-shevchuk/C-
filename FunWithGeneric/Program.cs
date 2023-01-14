@@ -1,6 +1,4 @@
-﻿using CoreLibrary.Classes;
-using CoreLibrary.Interfaces;
-using System;
+﻿using System;
 
 namespace FunWithGeneric
 {

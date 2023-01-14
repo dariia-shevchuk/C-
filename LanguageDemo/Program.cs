@@ -3,7 +3,6 @@ using LanguageDemo.Language;
 using LanguageDemo.View;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
 
 namespace LanguageDemo
 {

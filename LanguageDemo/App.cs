@@ -1,10 +1,5 @@
 ﻿using LanguageDemo.Enums;
 using LanguageDemo.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LanguageDemo
 {
@@ -23,7 +18,7 @@ namespace LanguageDemo
         }
         public void Start()
         {
-            while(true)
+            while (true)
             {
                 _menu.ShowMainMenu();
                 var response = _userResponsProvider.GetIntFromUser();

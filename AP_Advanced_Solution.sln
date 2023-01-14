@@ -39,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LanguageDemo", "LanguageDem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAoiClient", "WebAoiClient\WebAoiClient.csproj", "{6E6B941A-0D4A-4C94-94BF-8BDA16C1F110}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{C2844076-8B7E-4EF3-9EEE-8F81A7B1289A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{C2844076-8B7E-4EF3-9EEE-8F81A7B1289A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

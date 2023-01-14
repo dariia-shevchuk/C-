@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DelegateThree
+﻿namespace DelegateThree
 {
 
 }

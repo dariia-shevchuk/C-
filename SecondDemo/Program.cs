@@ -1,6 +1,4 @@
-﻿using CoreLibrary.Classes;
-using CoreLibrary.Interfaces;
-using System;
+﻿using System;
 using System.Collections;
 
 namespace SecondDemo
@@ -37,7 +35,6 @@ namespace SecondDemo
 
         private static void FunWithGenericCollection()
         {
-            System.Collections.Generic.List<int> myList;
             //jak przejżymy definicje takiej klasy to zobaczymy że bardzo dużo metod operuje na tak zwanym T
             //public void Add(T item);
             //void AddRange(IEnumerable<T> collection);

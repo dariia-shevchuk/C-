@@ -1,10 +1,5 @@
 ﻿using ConsoleApp1.Interfaces;
 using ConsoleApp1.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1.DataBase
 {
@@ -15,7 +10,7 @@ namespace ConsoleApp1.DataBase
         public Service(ICrudProvider<Car> crudProvider)
         {
             _crudProvider = crudProvider;
-            
+
 
         }
 

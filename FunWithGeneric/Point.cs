@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FunWithGeneric
+﻿namespace FunWithGeneric
 {
-    public class Point<T> where T: struct
+    public class Point<T> where T : struct
     {
         public Point(T x, T y)
         {

@@ -1,5 +1,4 @@
-﻿using CoreLibrary.Interfaces;
-using System.Collections;
+﻿using System.Collections;
 
 namespace SecondDemo
 {
@@ -17,7 +16,7 @@ namespace SecondDemo
             return (string)_arrayList1[pos]; //dalej rzutujemy 
         }
 
-        public void AddItem(string person) 
+        public void AddItem(string person)
         {
             _arrayList1.Add(person);//zapewniam bezpieczeństow typów
         }

@@ -38,7 +38,7 @@ namespace DelegateThree
         public void RaiseTemperature()
         {
             temp += 20;
-            if (temp > 140) 
+            if (temp > 140)
             {
 
                 OnExploaded?.Invoke("W domu przy ulicy... Piec wybuchł!"); //znak zapytania sprawdza czy delegat nie jest null
@@ -53,7 +53,7 @@ namespace DelegateThree
             Console.WriteLine($"Aktualna temperatura {temp} stopni");
         }
 
-       
+
 
     }
 }

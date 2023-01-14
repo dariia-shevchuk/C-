@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace LanguageDemo.View
+﻿namespace LanguageDemo.View
 {
     public class Menu
-    { 
+    {
 
 
         public void ShowChangngeDb()

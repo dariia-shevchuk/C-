@@ -63,7 +63,7 @@ namespace DelegateFour
 
             Console.WriteLine("\n\n Tylko parzyste 3");
 
-            var evenNumbersThree = list.FindAll(i => i % 2 == 0 );//metoda FindAll Przyjmuje Predicate<T> w naszym przykładzie T to int            
+            var evenNumbersThree = list.FindAll(i => i % 2 == 0);//metoda FindAll Przyjmuje Predicate<T> w naszym przykładzie T to int            
             foreach (var item in evenNumbersThree)
                 Console.Write(" {0}", item); //wyswietle tylko parzyste
 
@@ -82,7 +82,7 @@ namespace DelegateFour
             //oznacza to że Func moze wskazywać metode która zwraca jakis prametr i nie przyjmuje lub przyjmuje do 16 parametrów
             //przykład 
             Func<int, string, string> funcDelegate = new Func<int, string, string>(MethodForFunc);  // wskazuje metode która przyjmuje int oraz string a zwraca string
-            Console.WriteLine(  funcDelegate(15, "Test"));
+            Console.WriteLine(funcDelegate(15, "Test"));
 
 
             //Action, Action<T1>, Action<T1, T2> ... Action<T1, T2, ... , T16>
@@ -153,7 +153,7 @@ namespace DelegateFour
 
             foreach (var person in peaple)
             {
-                person.AgeChangedEventHandler +=(object sender, AgeChangedEventArg arg) => // nie pisze juz delegate tylko używanm operatora lambda( => )
+                person.AgeChangedEventHandler += (object sender, AgeChangedEventArg arg) => // nie pisze juz delegate tylko używanm operatora lambda( => )
                 {
                     Console.WriteLine($"Hura urodziny {arg.NewAge}");
                     birthdayCount++;
@@ -169,7 +169,7 @@ namespace DelegateFour
         private static void SecondExample()
         {
             var birthdayCount = 0;
-           
+
             var peaple = new List<Person>
             {
                 new Person("Jacek", 17),
@@ -180,8 +180,8 @@ namespace DelegateFour
 
             foreach (var person in peaple)
             {
-                person.AgeChangedEventHandler += delegate (object sender, AgeChangedEventArg arg) 
-                    { 
+                person.AgeChangedEventHandler += delegate (object sender, AgeChangedEventArg arg)
+                    {
                         Console.WriteLine($"Hura urodziny {arg.NewAge}");
                         birthdayCount++;
                     }; //zwróć uwage ze za ostatnią klamrą tez jest średnik

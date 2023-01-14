@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -40,7 +37,7 @@ namespace DelegateThree
             runner.RunnTest()
                 .ContinueWith((t) => isEnd = true);
 
-            while(!isEnd)
+            while (!isEnd)
             {
                 Thread.Sleep(200);
                 Console.Write(" > ");
@@ -160,7 +157,7 @@ namespace DelegateThree
 
         private static void Item_OnTestStateEventHandler(object sender, TestStateChangedEventArg arg)
         {
-            if(arg.NewState == TestState.Faild && sender is Test test)
+            if (arg.NewState == TestState.Faild && sender is Test test)
             {
                 Console.WriteLine("Ojojoj {0} ma status {1}", test.TestName, arg.NewState);
             }
@@ -170,11 +167,11 @@ namespace DelegateThree
 
         private static void Person_AgeChangedEventHandler(object sender, AgeChangedEventArg ageChangedEventArg)
         {
-            if(sender is Person person)
+            if (sender is Person person)
             {
                 Console.WriteLine($"Hura {person.Name} miał {ageChangedEventArg.OldAge} lat ale od teraz ma {ageChangedEventArg.NewAge} trzeba swiętować");
                 ageChangedEventArg.NewAge = 1888;
-        }
+            }
 
             ////to jest tylko przykład i to jest bardzo brzydkie chodzi tylko o DelegatGeneryczny
             //if(sender is PersonTwo personTwo)
@@ -230,7 +227,7 @@ namespace DelegateThree
 
     public class Test
     {
-        public delegate void TestStateChangedDelegate(object? sender, 
+        public delegate void TestStateChangedDelegate(object? sender,
             TestStateChangedEventArg arg);
         public event TestStateChangedDelegate OnTestStateEventHandler;
 
@@ -245,9 +242,9 @@ namespace DelegateThree
         private bool _endWithSuccess;
         private TestState _state;
 
-        public string TestName { get;  }
-        public TestState State 
-        {  
+        public string TestName { get; }
+        public TestState State
+        {
             get => _state;
             private set
             {
@@ -256,7 +253,7 @@ namespace DelegateThree
                 _state = value;
                 OnTestStateEventHandler?.Invoke(this, new TestStateChangedEventArg(oldState, _state));
             }
-        } 
+        }
 
         public void RunTest()
         {
@@ -274,7 +271,7 @@ namespace DelegateThree
 
 
         }
-        
+
     }
 
     public enum TestState
@@ -282,6 +279,6 @@ namespace DelegateThree
         Waiting,
         Running,
         Success,
-        Faild        
+        Faild
     }
 }

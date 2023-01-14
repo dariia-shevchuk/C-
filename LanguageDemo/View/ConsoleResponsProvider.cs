@@ -21,7 +21,7 @@ namespace LanguageDemo.View
         }
         public string GetStringFromUser()
         {
-            while(true)
+            while (true)
             {
                 Console.Write(":> ");
                 var response = Console.ReadLine();

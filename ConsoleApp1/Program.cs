@@ -10,7 +10,7 @@ var menu = new Menu();
 var service = new Service(curdProvider);
 //-----------------------
 
-while(true)
+while (true)
 {
     menu.ShowMainMenu();
     var res = Console.ReadLine();
@@ -57,7 +57,7 @@ void ChangeDB()
 {
     menu.ShowChangngeDb();
     var res = Console.ReadLine();
-    switch(res)
+    switch (res)
     {
         case "0":
             curdProvider.SetCurrentCrudOption("Mongo");
