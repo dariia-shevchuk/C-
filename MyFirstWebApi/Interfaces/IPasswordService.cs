@@ -7,3 +7,4 @@
         string Hash(string password);
     }
 }
+

@@ -10,7 +10,6 @@ namespace MyFirstWebApi.DataBase
     public class UserRepository : RepositoryBase, IUserRepository
     {
         private readonly List<User> _users = new List<User>();
-        private readonly DatabaseOptions _databaseOptions;
 
         public UserRepository(DatabaseOptions databaseOptions)
             : base(databaseOptions)
