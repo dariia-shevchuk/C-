@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
+using MyFirstWebApi.Exceptions;
 using MyFirstWebApi.Interfaces;
 using MyFirstWebApi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -23,8 +25,9 @@ namespace MyFirstWebApi.Services
         }
         public void AddNewSong(Song newSong)
         {
-            //przeprowadzam sprawdzanie
-            //udaje zapis do bazy danych 
+            if (string.IsNullOrEmpty(newSong.Title))
+                throw new SongNameNullOrEmptyException();
+
             var value = _httpContextAccessor.HttpContext.User.FindFirst("userId").Value;
 
             _songs.Add(newSong.AsSongInDb(int.Parse(value)));
